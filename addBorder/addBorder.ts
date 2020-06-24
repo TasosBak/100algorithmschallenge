@@ -4,13 +4,7 @@ function addBorder(picture: string[]): string[] {
   picture.unshift(wall);
   picture.push(wall);
 
-  //   const picture1 = picture.map((item) => "*" + item + "*");
-
-  for (let i = 1; i < picture.length - 1; i++) {
-    picture[i] = "*" + picture[i] + "*";
-  }
-
-  return picture;
+  return picture.map((item) => "*" + item + "*");
 }
 
 console.log(addBorder(["abc", "ded"]));
